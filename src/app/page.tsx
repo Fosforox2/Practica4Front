@@ -12,10 +12,7 @@ import { GET_SIMPLE_CHARACTERS } from "@/features/characters/queries";
 export default function CharactersPage() {
   const [page, setPage] = useState(1);
 
-  const { data, loading, error } = useQuery<
-    GetSimpleCharactersQuery,
-    GetSimpleCharactersQueryVariables
-  >(GET_SIMPLE_CHARACTERS, {
+  const { data, loading, error } = useQuery<GetSimpleCharactersQuery,GetSimpleCharactersQueryVariables>(GET_SIMPLE_CHARACTERS, {
     variables: { page },
   });
 
